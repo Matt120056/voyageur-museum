@@ -7,3 +7,9 @@ body {
 h1 {
   color: #333;
 }
+
+/* Oct 12: W. Henderson asked for Display Case 7 to be moved
+   next to the loading dock door, "for better light". Done. -Sam */
+.case-7 {
+  margin-left: 0;
+}
