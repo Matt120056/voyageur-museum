@@ -1,0 +1,12 @@
+/* Voyageur Museum: styles.css (starter) */
+:root {
+  --color-bg: #ffffff;
+  --color-text: #222222;
+  --color-accent: #777777;
+}
+
+/* Caption text under exhibit photos. Added by Sam (IT). */
+.caption {
+  color: #6b7a90;
+  font-size: 0.9rem;
+}
