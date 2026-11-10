@@ -77,6 +77,96 @@
             </div>
         </section>
 
+
+        <section id="timeline">
+            <h2>Timeline</h2>
+
+            <ol>
+                <li><strong>12 October:</strong> Display Case 7 is moved near the loading dock.</li>
+                <li><strong>14 October, 6:30 p.m.:</strong> Marcel Brisebois delivers crates to the museum.</li>
+                <li><strong>14 October, 9:58 p.m.:</strong> Gaston Lavoie begins his night shift.</li>
+                <li><strong>15 October, 12:15 a.m.:</strong> The East Wing alarm is switched off.</li>
+                <li><strong>15 October, 6:00 a.m.:</strong> The Voyageur Compass is discovered missing.</li>
+                <li><strong>15 October, later:</strong> A suspicious auction listing appears online.</li>
+            </ol>
+        </section>
+
+        <section id="report">
+            <h2>Submit your report</h2>
+
+            <p>Review the evidence and submit your conclusion about who took the compass.</p>
+
+            <form action="/reports" method="post">
+
+                <fieldset>
+                    <legend>About you</legend>
+
+                    <p>
+                        <label for="detective-name">Your name:</label>
+                        <input type="text" id="detective-name" name="detectiveName" required>
+                    </p>
+
+                    <p>
+                        <label for="detective-email">Email address:</label>
+                        <input type="email" id="detective-email" name="detectiveEmail" required>
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Who took the compass?</legend>
+
+                    <p>
+                        <input type="radio" id="who-lavoie" name="suspect" value="lavoie" required>
+                        <label for="who-lavoie">Gaston Lavoie</label>
+                    </p>
+
+                    <p>
+                        <input type="radio" id="who-nandakumar" name="suspect" value="nandakumar">
+                        <label for="who-nandakumar">Priya Nandakumar</label>
+                    </p>
+
+                    <p>
+                        <input type="radio" id="who-henderson" name="suspect" value="henderson">
+                        <label for="who-henderson">Walt Henderson</label>
+                    </p>
+
+                    <p>
+                        <input type="radio" id="who-brisebois" name="suspect" value="brisebois">
+                        <label for="who-brisebois">Marcel Brisebois</label>
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Your evidence</legend>
+
+                    <p>
+                        <label for="best-clue">Which clue cconvinced you the most?</label>
+                        <select id="best-clue" name="bestClue" required>
+                            <option value="">– Choose a clue –</option>
+                            <option value="deleted-notes">The deleted staff notes</option>
+                            <option value="security-log">The security log on the archive branch</option>
+                            <option value="html-comment">The note in the old HTML page</option>
+                            <option value="css-comment">The note in the old stylesheet</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="reasoning">Explain your reasoning:</label>
+                        <textarea id="reasoning" name="reasoning" rows="5" cols="40" placeholder="Explain which evidence supports your conclusion."></textarea>
+                    </p>
+
+                    <p>
+                        <input type="checkbox" id="confirm" name="confirmEvidence" value="yes" required>
+                        <label for="confirm">I found my evidence in the repository</label>
+                    </p>
+                </fieldset>
+
+                <button type="submit" class="btn">Send report</button>
+
+            </form>
+        </section>
+
+
     </main>
 
     <footer>
