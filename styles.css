@@ -10,3 +10,75 @@
   color: #6b7a90;
   font-size: 0.9rem;
 }
+
+
+/* Mission 5: Base styles */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+header {
+  padding: 1rem;
+  background-color: #ffffff;
+  border-bottom: 1px solid #cccccc;
+}
+
+header img {
+  width: 4rem;
+}
+
+nav a {
+  margin-left: 1.5rem;
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+main {
+  max-width: 70rem;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+footer {
+  padding: 1rem;
+  background-color: var(--color-text);
+  color: var(--color-bg);
+  text-align: center;
+}
+
+footer a {
+  color: var(--color-bg);
+}
+
+fieldset {
+  margin: 0 0 1rem;
+  padding: 1rem;
+  border: 1px solid #cccccc;
+}
+
+textarea {
+  width: 100%;
+}
+
+.active {
+  color: var(--color-accent);
+  border-bottom: 2px solid var(--color-accent);
+}
