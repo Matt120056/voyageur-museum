@@ -16,7 +16,7 @@
 
 /* Caption text under exhibit photos. Added by Sam (IT). */
 .caption {
-  color: #6b7a90;
+  color: var(--color-muted);
   font-size: 0.9rem;
 }
 
