@@ -208,32 +208,70 @@ Placeholder = What could I enter here?
 
 ## Mission 5: Style the Basics
 **What DevTools showed for the active link (which line was crossed out, and which rule won):**
+The nav a colour is be crossed out, and .active is winning the battle. This is because
+CSS specificity is calculated using IDs, classes and element selectors.
 
 **Specificity weights (IDs, classes, types):**
 
 | Selector | Weight |
 |---|---|
-| `a` | |
-| `nav a` | |
-| `.active` | |
-| `.btn:hover` | |
-| `#welcome a` | |
+| `a` | (0,0,1) |
+| `nav a` | (0,0,2) |
+| `.active` | (0,1,0) |
+| `.btn:hover` | (0,2,0) |
+| `#welcome a` | (1,0,1) |
 
 ## Mission 6: Flexbox and Grid
 ```css
 (my nav and .showcase rules)
+
+/* nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+}
+
+
+/* .showcase {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+
 ```
 **Explain (what does `1fr` mean?):**
+It stands for 1 fraction which is a flexible unit of measurement for grid layouts.
 
 ## Mission 7: Phone Test and Mobile-First
 **What the page looked like without the viewport tag at 375px:**
+It was super tiny and only filled half the page.
 
 **What happened to the page before I fixed the table:**
-
+The entire page scrolled sideways
 ```css
 (my @media queries and the .table-wrap rule)
+
+/*@media (min-width: 768px) {
+  .exhibit-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/*@media (min-width: 1024px) {
+  .showcase {
+    grid-template-columns: 2fr 1fr;
+    align-items: start;
+  }
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
 ```
-Screenshots at 375px, 800px and 1280px saved in `screenshots/`: yes / no
+Screenshots at 375px, 800px and 1280px saved in `screenshots/`: yes / no yes
 
 **Explain (what does `min-width: 768px` mean?):**
 
