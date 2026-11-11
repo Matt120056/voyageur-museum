@@ -274,13 +274,28 @@ The entire page scrolled sideways
 Screenshots at 375px, 800px and 1280px saved in `screenshots/`: yes / no yes
 
 **Explain (what does `min-width: 768px` mean?):**
+min-width: 768px means that the styles inside the media query only apply when the screen width is at least 768 pixels.
 
 ## Mission 8: Variables, Classes and Contrast
 ```css
 (my final :root block)
+/*:root {
+  --color-bg: #0f1b2d;
+  --color-surface: #1b2a41;
+  --color-text: #f3efe6;
+  --color-primary: #e9c46a;
+  --color-accent: #a63d2f;
+  --color-accent-dark: #7d2c21;
+  --color-border: #2f4363;
+  --color-muted: #a9b4c6;
+  --spacing-unit: 1rem;
+  --radius: 0.5rem;
+  --font-heading: "Fredoka", "Trebuchet MS", sans-serif;
+  --font-body: "Inter", "Helvetica Neue", Arial, sans-serif;
+}
 ```
 **What the CSS validator said (and whether any warning matters):**
-
+The W3C CSS Validator reported no errors in the stylesheet
 - Issue #1: https://github.com/...
 
 **The gold trap: ratio of white on #c9a227:**
@@ -289,18 +304,20 @@ Screenshots at 375px, 800px and 1280px saved in `screenshots/`: yes / no yes
 
 | Text colour | On | What it is | Ratio | Passes 4.5 : 1? |
 |---|---|---|---|---|
-| `#f3efe6` | `#0f1b2d` | Body text | | |
-| `#e9c46a` | `#0f1b2d` | Gold heading on the page | | |
-| `#e9c46a` | `#1b2a41` | Gold heading inside a card | | |
-| `#ffffff` | `#a63d2f` | Button text | | |
-| `#ffffff` | `#7d2c21` | Button text on hover | | |
-| `#6b7a90` | `#1b2a41` | Photo caption on a card | | |
+| `#f3efe6` | `#0f1b2d` | Body text | 15.06:1 | yes |
+| `#e9c46a` | `#0f1b2d` | Gold heading on the page | 10.34:1 | yes |
+| `#e9c46a` | `#1b2a41` | Gold heading inside a card | 8.64:1 | yes |
+| `#ffffff` | `#a63d2f` | Button text | 6.31:1 | yes |
+| `#ffffff` | `#7d2c21` | Button text on hover | 9.32:1 | yes |
+| `#6b7a90` | `#1b2a41` | Photo caption on a card | 3.31:1 | no |
 
 **Which pair failed, and does it count as large text?**
+The photo caption using #6b7a90 on #1b2a41 failed the normal text contrast requirement, with a ratio of 3.31:1 instead of the required 4.5:1. The caption does not count as large text because it is displayed in a smaller font size
 
 **Checkpoint 3: output of git log --oneline | wc -l**
 ```text
-(paste)
+(base) ➜  voyageur-museum git:(main) ✗ git log --oneline | wc -l
+      16
 ```
 
 ## Mission 9: Git and GitHub Like a Team

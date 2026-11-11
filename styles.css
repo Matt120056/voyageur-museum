@@ -1,15 +1,17 @@
 /* Voyageur Museum: styles.css (starter) */
 :root {
-  --color-bg: var(--color-surface);
-  --color-surface: var(--color-surface);
-  --color-text: #222222;
-  --color-primary: #222222;
-  --color-accent: #777777;
-  --color-accent-dark: #555555;
-  --color-border: var(--color-border);
-  --color-muted: #666666;
-  --spacing-unit: var(--spacing-unit);
+  --color-bg: #0f1b2d;
+  --color-surface: #1b2a41;
+  --color-text: #f3efe6;
+  --color-primary: #e9c46a;
+  --color-accent: #a63d2f;
+  --color-accent-dark: #7d2c21;
+  --color-border: #2f4363;
+  --color-muted: #a9b4c6;
+  --spacing-unit: 1rem;
   --radius: 0.5rem;
+  --font-heading: "Fredoka", "Trebuchet MS", sans-serif;
+  --font-body: "Inter", "Helvetica Neue", Arial, sans-serif;
 }
 
 /* Caption text under exhibit photos. Added by Sam (IT). */
@@ -29,13 +31,38 @@ body {
   margin: 0;
   background-color: var(--color-bg);
   color: var(--color-primary);
-  font-family: Arial, sans-serif;
+  font-family: var(--font-body);
   line-height: 1.6;
 }
 
 img {
   max-width: 100%;
   height: auto;
+}
+
+a {
+  color: var(--color-primary);
+}
+
+h1,
+h2,
+h3 {
+  margin: 0 0 0.75rem;
+  font-family: var(--font-heading);
+  line-height: 1.2;
+  color: var(--color-primary);
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
 }
 
 header {
@@ -76,8 +103,8 @@ section {
 
 footer {
   padding: var(--spacing-unit);
-  background-color: var(--color-primary);
-  color: var(--color-bg);
+  background-color: var(--color-surface);
+  color: var(--color-text);
   text-align: center;
 }
 
@@ -96,7 +123,7 @@ textarea {
 }
 
 .active {
-  color: var(--color-accent);
+  color: var(--color-primary);
   border-bottom: 2px solid var(--color-accent);
 }
 
@@ -119,6 +146,14 @@ textarea {
 @media (min-width: 768px) {
   .exhibit-list {
     grid-template-columns: repeat(2, 1fr);
+
+    h1 {
+      font-size: 2.5rem;
+    }
+    
+    h2 {
+      font-size: 1.75rem;
+    }
   }
 
   header,
